@@ -1,0 +1,20 @@
+name: schedule_dbt_job
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+env:
+  DBT_PROFILES_DIR: ./
+  DBT_SNOWFLAKE_USERNAME: ${{ secrets.DBT_SNOWFLAKE_USERNAME }}
+  DBT_SNOWFLAKE_PW: ${{ secrets.DBT_SNOWFLAKE_PW }}
+  DBT_SNOWFLAKE_ROLE: ${{ secrets.DBT_SNOWFLAKE_ROLE }}
+
+jobs:
+  schedule_dbt_job:
+    name: schedule_dbt_job
+    runs-on: windows-latest
+
+    steps:
+   
