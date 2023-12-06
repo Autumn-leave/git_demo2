@@ -1,0 +1,13 @@
+DBT_DEMO_PRO:
+  outputs:
+    dev:
+      account: jd14733.ap-south-1
+      database: SAMPLE_DB
+      password: '#MEenu#2002#'
+      role: ACCOUNTADMIN
+      schema: sam
+      threads: 4
+      type: snowflake
+      user: Meenachi
+      warehouse: DEMO
+  target: dev
